@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ka" class="scroll-smooth">
+<head>
+    <link rel="icon" type="image/png" href="./photos/Screenshot 2026-10-27 225110.png ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tekla | დოქტორ თეკლა - Anatomical Tote Bags</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans Georgian"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        organ: {
+                            pink: '#FF6B8B',
+                            red: '#E63946',
+                            purple: '#8A4FFF',
+                            teal: '#2A9D8F',
+                            bg: '#0F0E13',
+                            card: '#181720',
+                            border: '#2A2838'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0F0E13;
+            color: #F3F4F6;
+            font-family: 'Noto Sans Georgian', 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .organ-gradient-text {
+            background: linear-gradient(135deg, #FF6B8B 0%, #8A4FFF 50%, #2A9D8F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .organ-card {
+            background: rgba(24, 23, 32, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 79, 255, 0.2);
+        }
+
+        .organ-card:hover {
+            border-color: rgba(255, 107, 139, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(138, 79, 255, 0.3);
+        }
+
+        /* Custom Organ Letter Badge Styling */
+        .organ-letter-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 107, 139, 0.3);
+            border-radius: 12px;
+            padding: 8px 12px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .organ-letter-badge:hover {
+            transform: translateY(-3px) scale(1.05);
+            border-color: #FF6B8B;
+        }
+
+        /* Smooth Canvas Bag Switching */
+        .bag-preview-img {
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-organ-pink selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-organ-bg/90 backdrop-blur-md border-b border-organ-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Info -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-organ-pink via-organ-purple to-organ-teal p-[2px]">
+                    <div class="w-full h-full bg-organ-bg rounded-[10px] flex items-center justify-center font-bold text-organ-pink text-lg">
+                        🫀
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight text-white">dr.tekla</span>
+                    <span class="text-[10px] tracking-widest text-organ-pink uppercase -mt-1" id="nav-subtitle">დოქტორ თეკლა &bull; ნაჭრის ჩანთები</span>
+                </div>
+            </a>
+
+            <!-- Right Controls: Language Switcher & Direct Order Link -->
+            <div class="flex items-center gap-4">
+                <!-- Bilingual Switcher -->
+                <button onclick="toggleLanguage()" class="px-3.5 py-1.5 rounded-full border border-organ-border bg-organ-card text-xs font-semibold text-gray-300 hover:text-white hover:border-organ-pink transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-organ-pink"></i>
+                    <span id="lang-btn-text">EN</span>
+                </button>
+
+                <!-- Order Jump Button -->
+                <a href="#order-section" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-organ-pink to-organ-purple text-white text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity shadow-lg shadow-organ-pink/20">
+                    <span id="nav-order-btn">შეკვეთა</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-24">
+
+        <!-- HERO SECTION -->
+        <section class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Intro text -->
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-organ-pink/30 bg-organ-pink/10 text-organ-pink text-xs font-bold tracking-wide">
+                        <span>🧠 🫀 🫁 🦴 🫄</span>
+                        <span id="hero-badge">ანატომიური ორგანოს ასოები</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        <span id="hero-title-1">შენი სახელი</span><br/>
+                        <span class="organ-gradient-text" id="hero-title-2">ორგანოების ასოებით</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-sm sm:text-base font-normal leading-relaxed max-w-xl mx-auto lg:mx-0" id="hero-description">
+                        წარმოგიდგენთ ეკოლოგიურად სუფთა ნაჭრის ჩანთებს, რომლებზეც დაიბეჭდება თქვენი სახელი. თითოეული ასო წარმოდგენილია ადამიანის ორგანოს უნიკალური ილუსტრაციით.
+                    </p>
+
+                    <!-- Features bullets -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+                        <div class="p-3 rounded-xl bg-organ-card border border-organ-border">
+                            <div class="text-organ-pink text-sm mb-1"><i class="fa-solid fa-seedling"></i></div>
+                            <div class="text-xs font-bold text-white" id="feat-1-title">100% ბამბა</div>
+                            <div class="text-[11px] text-gray-400" id="feat-1-desc">მაღალი ხარისხის ნაჭერი</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-organ-card border border-organ-border">
+                            <div class="text-organ-purple text-sm mb-1"><i class="fa-solid fa-paintbrush"></i></div>
+                            <div class="text-xs font-bold text-white" id="feat-2-title">ინდივიდუალური</div>
+                            <div class="text-[11px] text-gray-400" id="feat-2-desc">თქვენი სასურველი სახელი</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-organ-card border border-organ-border col-span-2 sm:col-span-1">
+                            <div class="text-organ-teal text-sm mb-1"><i class="fa-solid fa-truck-fast"></i></div>
+                            <div class="text-xs font-bold text-white" id="feat-3-title">მიწოდება</div>
+                            <div class="text-[11px] text-gray-400" id="feat-3-desc">მთელი საქართველოს მასშტაბით</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Custom Name Live Interactive Preview -->
+                <div class="organ-card p-6 sm:p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center justify-between pb-4 border-b border-organ-border">
+                        <div>
+                            <h3 class="text-lg font-bold text-white" id="preview-box-title">ცოცხალი პრევუ (Live Preview)</h3>
+                            <p class="text-xs text-gray-400" id="preview-box-subtitle">ჩაწერეთ სახელი და ნახეთ ორგანოს ასოები</p>
+                        </div>
+                        <span class="text-2xl">🫀</span>
+                    </div>
+
+                    <!-- Input Name Field -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="label-type-name">
+                            ჩაწერეთ სახელი (ქართულად ან ინგლისურად):
+                        </label>
+                        <input type="text" id="live-name-input" value="თეკლა" oninput="updateOrganPreview()" placeholder="მაგ: თეკლა, თამარი, Salome..." 
+                               class="w-full px-4 py-3.5 rounded-xl bg-organ-bg border border-organ-pink/40 text-white font-bold text-lg focus:outline-none focus:border-organ-pink transition-colors">
+                    </div>
+
+                    <!-- Visual Organ Letter Display Box -->
+                    <div>
+                        <div class="text-xs text-organ-pink font-semibold mb-2 flex items-center justify-between">
+                            <span id="organ-letter-title">ორგანოების ილუსტრირებული ასოები:</span>
+                            <span class="text-[11px] text-gray-400" id="organ-count">5 ასო</span>
+                        </div>
+
+                        <div id="organ-letters-container" class="min-h-[100px] p-4 rounded-2xl bg-organ-bg border border-organ-border flex flex-wrap items-center justify-center gap-3">
+                            <!-- JS populated dynamic organ elements -->
+                        </div>
+                    </div>
+
+                    <a href="#order-section" onclick="prefillOrderName()" class="w-full py-3.5 rounded-xl bg-organ-pink text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-organ-pink/90 transition-all">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <span id="btn-use-name">ამ სახელის შეკვეთა</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION (ONLY 2 BAGS) -->
+        <section id="products" class="py-16 bg-organ-card/50 border-y border-organ-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-organ-pink uppercase tracking-widest" id="sec-product-sub">პროდუქცია</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1" id="sec-product-title">ორი ფერის ნაჭრის ჩანთა</h2>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-2" id="sec-product-desc">
+                        აირჩიეთ სასურველი ფერი — თეთრი ან შავი ტილოს ჩანთა თქვენი პერსონალური ანატომიური წარწერით.
+                    </p>
+                </div>
+
+                <!-- 2 Bag Options Grid -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- OPTION 1: WHITE BAG -->
+                    <div class="organ-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between group">
+                        <div>
+                            <div class="relative rounded-2xl overflow-hidden bg-white/5 border border-organ-border aspect-[4/3] flex items-center justify-center p-4">
+                                <span class="absolute top-3 left-3 bg-white text-organ-bg px-3 py-1 rounded-full text-[11px] font-extrabold uppercase">
+                                    Classic White
+                                </span>
+                                <!-- Realistic Bag Graphic Canvas -->
+                                <div class="w-48 h-56 bg-[#F5F2EB] rounded-lg shadow-xl border border-gray-300 relative flex flex-col items-center justify-center p-3">
+                                    <!-- Straps -->
+                                    <div class="absolute -top-10 w-24 h-12 border-t-4 border-x-4 border-[#E0DBCF] rounded-t-full"></div>
+                                    <div class="text-center">
+                                        <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">dr.tekla</div>
+                                        <div class="flex items-center justify-center gap-1 my-1">
+                                            <span class="text-sm">🫀</span><span class="text-sm">🧠</span><span class="text-sm">🫁</span><span class="text-sm">🦴</span>
+                                        </div>
+                                        <div class="text-[11px] font-extrabold text-pink-600 font-serif">თეკლა</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <h3 class="text-xl font-bold text-white" id="bag1-name">თეთრი ნაჭრის ჩანთა</h3>
+                                <p class="text-xs text-gray-400 mt-2 leading-relaxed" id="bag1-desc">
+                                    ნატურალური ღია ფერის ბამბის ტილოს ჩანთა. ორგანოს ასოების მკვეთრი და ფერადი პრინტით.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-organ-border flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-400 block" id="price-label-1">ფასი</span>
+                                <span class="text-2xl font-black text-organ-pink">35 GEL</span>
+                            </div>
+                            <button onclick="selectBagOption('white')" class="px-6 py-3 rounded-xl bg-white text-organ-bg hover:bg-gray-200 font-bold text-xs uppercase tracking-wider transition-colors">
+                                <span id="bag1-select-btn">არჩევა & შეკვეთა</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- OPTION 2: BLACK BAG -->
+                    <div class="organ-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between group">
+                        <div>
+                            <div class="relative rounded-2xl overflow-hidden bg-black/40 border border-organ-border aspect-[4/3] flex items-center justify-center p-4">
+                                <span class="absolute top-3 left-3 bg-organ-pink text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase">
+                                    Deep Black
+                                </span>
+                                <!-- Realistic Bag Graphic Canvas -->
+                                <div class="w-48 h-56 bg-[#1A1921] rounded-lg shadow-2xl border border-gray-800 relative flex flex-col items-center justify-center p-3">
+                                    <!-- Straps -->
+                                    <div class="absolute -top-10 w-24 h-12 border-t-4 border-x-4 border-[#2A2838] rounded-t-full"></div>
+                                    <div class="text-center">
+                                        <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">dr.tekla</div>
+                                        <div class="flex items-center justify-center gap-1 my-1">
+                                            <span class="text-sm">🫀</span><span class="text-sm">🧠</span><span class="text-sm">🫁</span><span class="text-sm">🦴</span>
+                                        </div>
+                                        <div class="text-[11px] font-extrabold text-organ-pink font-serif">თეკლა</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <h3 class="text-xl font-bold text-white" id="bag2-name">შავი ნაჭრის ჩანთა</h3>
+                                <p class="text-xs text-gray-400 mt-2 leading-relaxed" id="bag2-desc">
+                                    მკვეთრი შავი ფერის მყარი ბამბის ჩანთა. კონტრასტული ორგანოს ილუსტრაციების ბეჭდვით.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-organ-border flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-400 block" id="price-label-2">ფასი</span>
+                                <span class="text-2xl font-black text-organ-pink">35 GEL</span>
+                            </div>
+                            <button onclick="selectBagOption('black')" class="px-6 py-3 rounded-xl bg-organ-pink text-white hover:bg-organ-pink/90 font-bold text-xs uppercase tracking-wider transition-colors">
+                                <span id="bag2-select-btn">არჩევა & შეკვეთა</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ORDER FORM SECTION (SUBMITS TO geimersaba82@gmail.com) -->
+        <section id="order-section" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="organ-card p-6 sm:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-xs font-bold text-organ-pink uppercase tracking-widest" id="form-tag">სწრაფი შეკვეთა</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" id="form-title">შეუკვეთე შენი ჩანთა</h2>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2" id="form-subtitle">
+                        შეავსეთ ფორმა. შეკვეთა ავტომატურად გაიგზავნება ელ-ფოსტაზე: <span class="text-organ-pink font-mono">geimersaba82@gmail.com</span>
+                    </p>
+                </div>
+
+                <form id="drtekla-order-form" onsubmit="submitBagOrder(event)" action="https://formspree.io/f/geimersaba82@gmail.com" method="POST" class="space-y-6">
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Customer Name -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-cust-name">სახელი და გვარი *</label>
+                            <input type="text" name="customer_name" required placeholder="მაგ: სალომე კაპანაძე" class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-border text-white text-sm focus:border-organ-pink focus:outline-none">
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-cust-phone">ტელეფონის ნომერი *</label>
+                            <input type="tel" name="phone_number" required placeholder="599 00 00 00" class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-border text-white text-sm focus:border-organ-pink focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Bag Color Selection (2 Options Only) -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-bag-color">ჩანთის ფერი *</label>
+                            <select id="bag-color-select" name="bag_color" required class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-border text-white text-sm focus:border-organ-pink focus:outline-none">
+                                <option value="თეთრი ნაჭრის ჩანთა (White Tote)" selected>თეთრი ნაჭრის ჩანთა / White Canvas</option>
+                                <option value="შავი ნაჭრის ჩანთა (Black Tote)">შავი ნაჭრის ჩანთა / Black Canvas</option>
+                            </select>
+                        </div>
+
+                        <!-- Printed Name on Bag -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-print-name">ჩანთაზე დასაბეჭდი სახელი *</label>
+                            <input type="text" id="order-custom-name" name="custom_printed_name" required placeholder="მაგ: თეკლა" class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-pink/60 text-organ-pink font-bold text-sm focus:border-organ-pink focus:outline-none">
+                        </div>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-address">მიტანის მისამართი (ქალაქი, ქუჩა) *</label>
+                        <input type="text" name="delivery_address" required placeholder="თბილისი, რუსთაველის გამზ. #1" class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-border text-white text-sm focus:border-organ-pink focus:outline-none">
+                    </div>
+
+                    <!-- Additional Notes -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2" id="lbl-notes">დამატებითი კომენტარი (სურვილისამებრ)</label>
+                        <textarea name="notes" rows="2" placeholder="სხვა დეტალები შეკვეთასთან დაკავშირებით..." class="w-full px-4 py-3 rounded-xl bg-organ-bg border border-organ-border text-white text-sm focus:border-organ-pink focus:outline-none"></textarea>
+                    </div>
+
+                    <!-- Hidden target email field -->
+                    <input type="hidden" name="_to" value="geimersaba82@gmail.com">
+                    <input type="hidden" name="_subject" value="ახალი შეკვეთა - Dr. Tekla Tote Bag">
+
+                    <!-- Submit Button -->
+                    <div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-organ-pink via-organ-purple to-organ-pink text-white font-extrabold text-sm uppercase tracking-widest hover:opacity-95 transition-opacity shadow-lg shadow-organ-pink/25">
+                            <span id="btn-submit-text">შეკვეთის გაგზავნა</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-organ-bg py-10 border-t border-organ-border text-center text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <span class="font-bold text-white text-lg">dr.tekla</span>
+                <span>&bull;</span>
+                <a href="https://www.instagram.com/dr.tekla?psln=MWJjeW4zbnZ0cmE5cg%3D%3D" target="_blank" class="text-organ-pink hover:underline flex items-center gap-1">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@dr.tekla</span>
+                </a>
+            </div>
+            <p id="footer-copy">&copy; 2026 Dr. Tekla. ყველა უფლება დაცულია. ნაჭრის ჩანთები ორგანოს ასოებით.</p>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-organ-card border border-organ-pink/50 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300">
+        <div class="w-8 h-8 rounded-full bg-organ-pink/20 text-organ-pink flex items-center justify-center">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <h5 id="toast-head" class="font-bold text-xs">შეკვეთა გაიგზავნა!</h5>
+            <p id="toast-sub" class="text-[11px] text-gray-400">tsabadzetekla@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // ORGAN ICONS MAPPING FOR LETTERS
+        const organMap = {
+            'ა': { organ: '🫀', name: 'გული (Heart)' },
+            'ბ': { organ: '🧠', name: 'ტვინი (Brain)' },
+            'გ': { organ: '🫁', name: 'ფილტვი (Lungs)' },
+            'დ': { organ: '🦴', name: 'ძვალი (Bone)' },
+            'ე': { organ: '👀', name: 'თვალი (Eye)' },
+            'ვ': { organ: '👂', name: 'ყური (Ear)' },
+            'ზ': { organ: '🦷', name: 'კბილი (Tooth)' },
+            'თ': { organ: '🫀', name: 'გული (Heart)' },
+            'ი': { organ: '🫄', name: 'ორგანო (Stomach)' },
+            'კ': { organ: '🧠', name: 'ტვინი (Brain)' },
+            'ლ': { organ: '🫁', name: 'ფილტვი (Lungs)' },
+            'მ': { organ: '🦴', name: 'ძვალი (Bone)' },
+            'ნ': { organ: '🫀', name: 'გული (Heart)' },
+            'ო': { organ: '👀', name: 'თვალი (Eye)' },
+            'პ': { organ: '🦷', name: 'კბილი (Tooth)' },
+            'ჟ': { organ: '🧠', name: 'ტვინი (Brain)' },
+            'რ': { organ: '🫁', name: 'ფილტვი (Lungs)' },
+            'ს': { organ: '🦴', name: 'ძვალი (Bone)' },
+            'ტ': { organ: '🫀', name: 'გული (Heart)' },
+            'უ': { organ: '🫄', name: 'ორგანო (Kidney)' },
+            'ფ': { organ: '🫁', name: 'ფილტვი (Lungs)' },
+            'ქ': { organ: '🧠', name: 'ტვინი (Brain)' },
+            'ღ': { organ: '🫀', name: 'გული (Heart)' },
+            'ყ': { organ: '👂', name: 'ყური (Ear)' },
+            'შ': { organ: '🦴', name: 'ძვალი (Bone)' },
+            'ჩ': { organ: '🫄', name: 'ორგანო (Liver)' },
+            'ც': { organ: '🦷', name: 'კბილი (Tooth)' },
+            'ძ': { organ: '🦴', name: 'ძვალი (Bone)' },
+            'წ': { organ: '🫁', name: 'ფილტვი (Lungs)' },
+            'ჭ': { organ: '🫀', name: 'გული (Heart)' },
+            'ხ': { organ: '🧠', name: 'ტვინი (Brain)' },
+            'ჯ': { organ: '🫄', name: 'ორგანო (Stomach)' },
+            'ჰ': { organ: '🫁', name: 'ფილტვი (Lungs)' }
+        };
+
+        const defaultOrgans = ['🫀', '🧠', '🫁', '🦴', '👁️', '🦷'];
+        let currentLang = 'ka';
+
+        // DICTIONARY FOR ENGLISH AND GEORGIAN TOGGLE
+        const dict = {
+            ka: {
+                navSub: 'დოქტორ თეკლა • ნაჭრის ჩანთები',
+                navOrder: 'შეკვეთა',
+                heroBadge: 'ანატომიური ორგანოს ასოები',
+                heroTitle1: 'შენი სახელი',
+                heroTitle2: 'ორგანოების ასოებით',
+                heroDesc: 'წარმოგიდგენთ ეკოლოგიურად სუფთა ნაჭრის ჩანთებს, რომლებზეც დაიბეჭდება თქვენი სახელი. თითოეული ასო წარმოდგენილია ადამიანის ორგანოს უნიკალური ილუსტრაციით.',
+                f1Title: '100% ბამბა',
+                f1Desc: 'მაღალი ხარისხის ნაჭერი',
+                f2Title: 'ინდივიდუალური',
+                f2Desc: 'თქვენი სასურველი სახელი',
+                f3Title: 'მიწოდება',
+                f3Desc: 'მთელი საქართველოს მასშტაბით',
+                prevBoxTitle: 'ცოცხალი პრევუ (Live Preview)',
+                prevBoxSub: 'ჩაწერეთ სახელი და ნახეთ ორგანოს ასოები',
+                lblTypeName: 'ჩაწერეთ სახელი (ქართულად ან ინგლისურად):',
+                organLetTitle: 'ორგანოების ილუსტრირებული ასოები:',
+                btnUseName: 'ამ სახელის შეკვეთა',
+                secProdSub: 'პროდუქცია',
+                secProdTitle: 'ორი ფერის ნაჭრის ჩანთა',
+                secProdDesc: 'აირჩიეთ სასურველი ფერი — თეთრი ან შავი ტილოს ჩანთა თქვენი პერსონალური ანატომიური წარწერით.',
+                bag1Name: 'თეთრი ნაჭრის ჩანთა',
+                bag1Desc: 'ნატურალური ღია ფერის ბამბის ტილოს ჩანთა. ორგანოს ასოების მკვეთრი და ფერადი პრინტით.',
+                bag2Name: 'შავი ნაჭრის ჩანთა',
+                bag2Desc: 'მკვეთრი შავი ფერის მყარი ბამბის ჩანთა. კონტრასტული ორგანოს ილუსტრაციების ბეჭდვით.',
+                priceLabel: 'ფასი',
+                btnSelect: 'არჩევა & შეკვეთა',
+                formTag: 'სწრაფი შეკვეთა',
+                formTitle: 'შეუკვეთე შენი ჩანთა',
+                formSub: 'შეავსეთ ფორმა. შეკვეთა ავტომატურად გაიგზავნება ელ-ფოსტაზე: geimersaba82@gmail.com',
+                lblCustName: 'სახელი და გვარი *',
+                lblCustPhone: 'ტელეფონის ნომერი *',
+                lblBagColor: 'ჩანთის ფერი *',
+                lblPrintName: 'ჩანთაზე დასაბეჭდი სახელი *',
+                lblAddress: 'მიტანის მისამართი (ქალაქი, ქუჩა) *',
+                lblNotes: 'დამატებითი კომენტარი (სურვილისამებრ)',
+                btnSubmit: 'შეკვეთის გაგზავნა'
+            },
+            en: {
+                navSub: 'Dr. Tekla • Anatomical Tote Bags',
+                navOrder: 'Order Now',
+                heroBadge: 'Anatomical Organ Typography',
+                heroTitle1: 'Your Name In',
+                heroTitle2: 'Organ-Shaped Letters',
+                heroDesc: 'Eco-friendly canvas tote bags printed with your custom name, where each letter is creatively formed by anatomical human organs.',
+                f1Title: '100% Cotton',
+                f1Desc: 'Durable Canvas Quality',
+                f2Title: 'Custom Printed',
+                f2Desc: 'Your Personalized Name',
+                f3Title: 'Fast Delivery',
+                f3Desc: 'Worldwide & Local Courier',
+                prevBoxTitle: 'Live Interactive Preview',
+                prevBoxSub: 'Type a name to preview organ letters',
+                lblTypeName: 'Enter Name (Georgian or English):',
+                organLetTitle: 'Illustrated Organ Letter Art:',
+                btnUseName: 'Order With This Name',
+                secProdSub: 'Products',
+                secProdTitle: 'Two Classic Tote Options',
+                secProdDesc: 'Select your preferred style — Natural White Canvas or Deep Black Cotton Tote.',
+                bag1Name: 'White Canvas Tote Bag',
+                bag1Desc: 'Natural unbleached cotton canvas bag with vibrant anatomical organ letter print.',
+                bag2Name: 'Black Canvas Tote Bag',
+                bag2Desc: 'Deep black cotton canvas tote with high contrast organ illustrations.',
+                priceLabel: 'Price',
+                btnSelect: 'Select & Order',
+                formTag: 'Direct Order',
+                formTitle: 'Reserve Your Custom Tote',
+                formSub: 'Complete the form. Orders dispatch straight to geimersaba82@gmail.com',
+                lblCustName: 'Full Name *',
+                lblCustPhone: 'Phone Number *',
+                lblBagColor: 'Bag Option *',
+                lblPrintName: 'Custom Name To Print *',
+                lblAddress: 'Delivery Address *',
+                lblNotes: 'Additional Notes (Optional)',
+                btnSubmit: 'Dispatch Order Now'
+            }
+        };
+
+        // UPDATE ORGAN PREVIEW LOGIC
+        function updateOrganPreview() {
+            const inputVal = document.getElementById('live-name-input').value.trim();
+            const container = document.getElementById('organ-letters-container');
+            const countLabel = document.getElementById('organ-count');
+
+            if (!inputVal) {
+                container.innerHTML = `<span class="text-xs text-gray-500">ჩაწერეთ სახელი ზემოთ...</span>`;
+                countLabel.innerText = '0 ასო';
+                return;
+            }
+
+            const chars = inputVal.split('');
+            countLabel.innerText = `${chars.length} ასო`;
+
+            container.innerHTML = chars.map((char, i) => {
+                const lowerChar = char.toLowerCase();
+                const organInfo = organMap[lowerChar] || { 
+                    organ: defaultOrgans[i % defaultOrgans.length], 
+                    name: 'ორგანო (Organ)' 
+                };
+
+                return `
+                    <div class="organ-letter-badge">
+                        <span class="text-2xl">${organInfo.organ}</span>
+                        <span class="text-xs font-bold text-white mt-1">${char}</span>
+                    </div>
+                `;
+            }).join('');
+
+            // Synchronize with order form input
+            document.getElementById('order-custom-name').value = inputVal;
+        }
+
+        function prefillOrderName() {
+            const name = document.getElementById('live-name-input').value;
+            document.getElementById('order-custom-name').value = name;
+        }
+
+        function selectBagOption(color) {
+            const select = document.getElementById('bag-color-select');
+            if (color === 'white') {
+                select.selectedIndex = 0;
+            } else {
+                select.selectedIndex = 1;
+            }
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // TOGGLE GEORGIAN / ENGLISH
+        function toggleLanguage() {
+            currentLang = currentLang === 'ka' ? 'en' : 'ka';
+            document.getElementById('lang-btn-text').innerText = currentLang === 'ka' ? 'EN' : 'KA';
+            const t = dict[currentLang];
+
+            document.getElementById('nav-subtitle').innerText = t.navSub;
+            document.getElementById('nav-order-btn').innerText = t.navOrder;
+            document.getElementById('hero-badge').innerText = t.heroBadge;
+            document.getElementById('hero-title-1').innerText = t.heroTitle1;
+            document.getElementById('hero-title-2').innerText = t.heroTitle2;
+            document.getElementById('hero-description').innerText = t.heroDesc;
+            
+            document.getElementById('feat-1-title').innerText = t.f1Title;
+            document.getElementById('feat-1-desc').innerText = t.f1Desc;
+            document.getElementById('feat-2-title').innerText = t.f2Title;
+            document.getElementById('feat-2-desc').innerText = t.f2Desc;
+            document.getElementById('feat-3-title').innerText = t.f3Title;
+            document.getElementById('feat-3-desc').innerText = t.f3Desc;
+
+            document.getElementById('preview-box-title').innerText = t.prevBoxTitle;
+            document.getElementById('preview-box-subtitle').innerText = t.prevBoxSub;
+            document.getElementById('label-type-name').innerText = t.lblTypeName;
+            document.getElementById('organ-letter-title').innerText = t.organLetTitle;
+            document.getElementById('btn-use-name').innerText = t.btnUseName;
+
+            document.getElementById('sec-product-sub').innerText = t.secProdSub;
+            document.getElementById('sec-product-title').innerText = t.secProdTitle;
+            document.getElementById('sec-product-desc').innerText = t.secProdDesc;
+            document.getElementById('bag1-name').innerText = t.bag1Name;
+            document.getElementById('bag1-desc').innerText = t.bag1Desc;
+            document.getElementById('bag2-name').innerText = t.bag2Name;
+            document.getElementById('bag2-desc').innerText = t.bag2Desc;
+
+            document.getElementById('price-label-1').innerText = t.priceLabel;
+            document.getElementById('price-label-2').innerText = t.priceLabel;
+            document.getElementById('bag1-select-btn').innerText = t.btnSelect;
+            document.getElementById('bag2-select-btn').innerText = t.btnSelect;
+
+            document.getElementById('form-tag').innerText = t.formTag;
+            document.getElementById('form-title').innerText = t.formTitle;
+            document.getElementById('form-subtitle').innerText = t.formSub;
+
+            document.getElementById('lbl-cust-name').innerText = t.lblCustName;
+            document.getElementById('lbl-cust-phone').innerText = t.lblCustPhone;
+            document.getElementById('lbl-bag-color').innerText = t.lblBagColor;
+            document.getElementById('lbl-print-name').innerText = t.lblPrintName;
+            document.getElementById('lbl-address').innerText = t.lblAddress;
+            document.getElementById('lbl-notes').innerText = t.lblNotes;
+            document.getElementById('btn-submit-text').innerText = t.btnSubmit;
+        }
+
+        // SUBMIT ORDER TO GMAIL
+        function submitBagOrder(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(res => {
+                showToast("შეკვეთა მიღებულია!", "გაგზავნილია tsabadzetekla@gmail.com-ზე");
+                form.reset();
+            }).catch(err => {
+                // FALLBACK DIRECT MAILTO
+                const custName = data.get('customer_name');
+                const phone = data.get('phone_number');
+                const bag = data.get('bag_color');
+                const customName = data.get('custom_printed_name');
+                const address = data.get('delivery_address');
+
+                const subject = encodeURIComponent(`Dr. Tekla Tote Order: ${customName}`);
+                const body = encodeURIComponent(
+                    `ახალი შეკვეთა (Dr. Tekla):\n\n` +
+                    `მომხმარებელი: ${custName}\n` +
+                    `ტელეფონი: ${phone}\n` +
+                    `ჩანთის ტიპი: ${bag}\n` +
+                    `დასაბეჭდი სახელი: ${customName}\n` +
+                    `მისამართი: ${address}\n`
+                );
+
+                window.location.href = `mailto:tsabadzetekla@gmail.com?subject=${subject}&body=${body}`;
+                showToast("შეკვეთა მომზადდა", "გახსენით ელ-ფოსტა გასაგზავნად");
+            });
+        }
+
+        function showToast(title, sub) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-head').innerText = title;
+            document.getElementById('toast-sub').innerText = sub;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        }
+
+        // INIT
+        window.onload = function() {
+            updateOrganPreview();
+        };
+    </script>
+</body>
+</html>
